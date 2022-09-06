@@ -6,8 +6,11 @@ factoryDesignPattern - It complies the implementaion of Factory Design for creat
 
 
 *********** oldMethod ***********  
-    1.  Created vehicle.hpp (as Base class) & vehicle.cpp.  
+
+    1.  Created vehicle.hpp (as Base class) & vehicle.cpp. 
+    
     2.  Created car.hpp & bike.hpp (as 2 children) along with car.cpp & bike.cpp.  
+    
     3.  Compiled & Created the #object file  
             $ g++ -c .\vehicle.cpp .\car.cpp .\bike.cpp
 

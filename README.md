@@ -5,18 +5,18 @@ oldMethod - the method which complies the regular Header file & Classes and Obje
 factoryDesignPattern - It complies the implementaion of Factory Design for creating a project.
 
 
-*********** oldMethod ***********
-    1.  Created vehicle.hpp (as Base class) & vehicle.cpp.
-    2.  Created car.hpp & bike.hpp (as 2 children) along with car.cpp & bike.cpp.
-    3.  Compiled & Created the #object file
+*********** oldMethod ***********  
+    1.  Created vehicle.hpp (as Base class) & vehicle.cpp.  
+    2.  Created car.hpp & bike.hpp (as 2 children) along with car.cpp & bike.cpp.  
+    3.  Compiled & Created the #object file  
             $ g++ -c .\vehicle.cpp .\car.cpp .\bike.cpp
 
-                where vehicle.o , car.o & bike.o were created
+                where vehicle.o , car.o & bike.o were created  
 
-    4.  Archived these object files in "vehicle_library.a"
+    4.  Archived these object files in "vehicle_library.a"    
             $ ar ru vehicle_library.a car.o bike.o
 
-    5.  Lastly created a client.cpp file which we will compile it and use the vehicle library to create the vehicle
+    5.  Lastly created a client.cpp file which we will compile it and use the vehicle library to create the vehicle    
             $ g++ -o client client.cpp .\vehicle_library.a
             
             
@@ -34,11 +34,11 @@ factoryDesignPattern - It complies the implementaion of Factory Design for creat
 
 
 
-****** ***factoryDesignPattern*** ******
+****** ***factoryDesignPattern*** ******  
 
-(We will just be using the Vehicle_factory class as the base class to handle all the fuctionality. Which will  be loosely coupled)
+(We will just be using the Vehicle_factory class as the base class to handle all the fuctionality. Which will  be loosely coupled)  
 
-[Library should be responsible to decide which obj type to create based on input.
+[Library should be responsible to decide which obj type to create based on input  
 Client should just call library's factory and pass type without worrying about actual implementation of creation of object.]
 
     1. Created vehicle_factory.hpp & included car.hpp and bike.hpp 
@@ -52,10 +52,13 @@ Client should just call library's factory and pass type without worrying about a
             ar ru vehicle_library.a .\vehicle_factory.o .\car.o .\bike.o  
 
     5. Compile the smartClient file
-<!-- g++ -o smartClient .\smart_client.cpp .\vehicle_library.a -->
+            <!-- g++ -o smartClient .\smart_client.cpp .\vehicle_library.a -->
             g++ -o smartClient smart_client.cpp vehicle_library.a  
 
 
-./smartClient 
+
+# We run the client's app  
+
+    i.e. : ./smartClient 
 
 
